@@ -1,0 +1,159 @@
+.modal{
+    @include flexCol();
+    max-width: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+}
+
+
+.modal__header{
+    @include flex();
+    justify-content: space-between;
+    background: $orange;
+    padding: 15px;
+    color: #fff;
+    height: 44px;
+    font-size: 12px;
+    font-weight: 300;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    .fa-map-marker-alt{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .fa-times{
+        font-size: 14px;
+        cursor: pointer;
+        @include easeOut;
+        &:hover{
+        color: $textColor;
+        }
+    }
+}
+
+.modal__review{
+    @include flex();
+    background: #fff;
+    padding: 20px 15px; 
+    height: 150px;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    &::-webkit-scrollbar {
+        width: 3px; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $lightGray;
+    }
+}
+
+.review__list{
+    height: 100%;
+    width: 100%;
+}
+
+.review__item{
+    padding-bottom: 20px;
+}
+
+.review__item-top{
+    @include flex();
+    justify-content: flex-start;
+}
+
+.review__item-top--name{
+    color: $textColor;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.review__item-top--place{
+    color: $textColor;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.review__item-bottom{
+    @include flex();
+    justify-content: flex-start;
+    font-size: 15px;
+    color: $textColor;
+    font-weight: 400;
+    padding-top: 15px;
+    
+}
+
+
+
+.review-form{
+    @include flexCol();
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    padding: 0 15px; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.review-form__title{
+    color: $orange;
+    font-weight: 500;
+    padding-top: 15px;
+    border-top: 1px solid $lightGray;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.review-form__input{
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 10px;
+    height: 32px;
+    outline: none;
+    border: 1px solid $lightGray; 
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.review-form__textArea{
+    @extend .review-form__input;
+    height: 129px;
+    padding-top: 15px;
+}
+
+.review-form__addBtn{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include flex();
+    justify-content: flex-end;
+}
+
+.review-form__addBtn--add{
+    border: none;
+    outline: none;
+    color: #fff;
+    background: $orange;
+    width: 87px;
+    height: 30px;
+    border-radius: 10px; 
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+    @include easeOut;
+    &:hover{
+        background: $textColor;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+#map{
+    overflow: hidden;
+}

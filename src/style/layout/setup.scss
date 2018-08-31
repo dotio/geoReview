@@ -1,0 +1,15 @@
+
+html {
+  height: 100%;
+  background: $background;
+
+}
+
+body {
+  // reset styles
+  @include reset();
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+}
