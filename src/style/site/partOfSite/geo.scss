@@ -1,9 +1,8 @@
 .modal{
     @include flexCol();
-    max-width: 380px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    min-width: 500px;
+    max-width: 500px;
+    @include centered();
     z-index: 999;
     
 }
@@ -22,7 +21,6 @@
     border-top-right-radius: 10px;
     .fa-map-marker-alt{
         font-size: 14px;
-        margin-right: 10px;
     }
     .fa-times{
         font-size: 14px;
@@ -63,19 +61,24 @@
 .review__item-top{
     @include flex();
     justify-content: flex-start;
-}
-
-.review__item-top--name{
     color: $textColor;
+    
+}
+.review__item-top--name{
     font-weight: 500;
     margin-right: 10px;
 }
 
 .review__item-top--place{
-    color: $textColor;
     font-weight: 400;
     margin-right: 10px;
 }
+.review__item-top--date{
+   @extend .review__item-top--place;
+   font-size: 14px;
+   line-height: -2px;
+}
+
 
 .review__item-bottom{
     @include flex();
@@ -155,5 +158,6 @@
 }
 
 #map{
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
